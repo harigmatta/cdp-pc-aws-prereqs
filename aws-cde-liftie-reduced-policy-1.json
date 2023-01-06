@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "RestrictedIamPermissionsToCreateServiceRole",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:AttachRolePolicy",
+                "iam:PutRolePolicy",
+                "iam:CreateInstanceProfile",
+                "iam:DetachRolePolicy",
+                "iam:DeleteRolePolicy",
+                "iam:DeleteInstanceProfile",
+                "iam:AddRoleToInstanceProfile",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:DeleteRole"
+            ],
+            "Resource": [
+                "arn:aws:iam::482492179838:role/liftie-*-eks-service-role",
+                "arn:aws:iam::482492179838:role/liftie-*-eks-worker-nodes",
+                "arn:aws:iam::482492179838:role/cdp-eks-master-role",
+                "arn:aws:iam::482492179838:role/cdp-liftie-instance-profile",
+                "arn:aws:iam::482492179838:instance-profile/liftie-*-eks-worker-nodes-NodeInstanceProfile-*"
+            ]
+        }
+    ]
+}
